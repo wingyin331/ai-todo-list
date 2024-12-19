@@ -115,6 +115,24 @@
       ]
     },
     {
+      "login": "adi-uchiha",
+      "name": "Aditya Shelke",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103348863?v=4",
+      "profile": "https://github.com/adi-uchiha",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sahilyeole",
+      "name": "Sahil Yeole",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73148455?v=4",
+      "profile": "https://github.com/sahilyeole",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "login": "RohanKaran",
       "name": "Rohan Karan",
       "avatar_url": "https://avatars.githubusercontent.com/u/38720754?v=4",
@@ -169,10 +187,55 @@
       ]
     },
     {
+      "login": "aritroCoder",
+      "name": "Aritra Bhaduri",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92646038?v=4",
+      "profile": "https://github.com/aritroCoder",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "t-bello7",
+      "name": "Bello Oluwatomisin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24270269?v=4",
+      "profile": "https://tbello.tech",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
       "login": "BrunoLagoa",
       "name": "Bruno Castro",
       "avatar_url": "https://avatars.githubusercontent.com/u/3878945?v=4",
       "profile": "http://brunocastro.dev",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "hertafui",
+      "name": "yq;",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32908863?v=4",
+      "profile": "https://github.com/hertafui",
+      "contributions": [
+        "design"
+      ]
+    },
+    {
+      "login": "Rutuja9696",
+      "name": "Rutuja9696",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73870995?v=4",
+      "profile": "https://github.com/Rutuja9696",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "divya-nshi",
+      "name": "Divyanshi Chouksey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/96721993?v=4",
+      "profile": "https://github.com/divya-nshi",
       "contributions": [
         "code"
       ]
