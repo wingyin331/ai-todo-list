@@ -1,27 +1,12 @@
-import React from "react";
 import Header from './components/Header';
-import Nav from './components/Nav';
 import ToDoContainer from './components/ToDoContainer';
-import PopUp from './components/PopUp';
 
 function App() {
-  const divStyles = {
-    width: "50%",
-    display: "flex",
-    flexDirection: "column",
-    margin: "auto",
-    marginTop: "50px",
-    backgroundColor: "#fff",
-    borderRadius: "5px",
-  };
-
   return (
     <>
       <Header />
-      <div style={divStyles}>
-        <Nav />
+      <div className='w-[95%] flex flex-col m-auto mt-12 bg-white rounded-md md:w-[80%] lg:w-1/2'>
         <ToDoContainer />
-        <PopUp />
       </div>
     </>
   );

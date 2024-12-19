@@ -1,91 +1,52 @@
-import React from "react";
-import Select from "react-select";
-import PropTypes from "prop-types";
+import Select from 'react-select';
+import PropTypes from 'prop-types';
 
-export default function SelectButton({ width, setValue }) {
+export default function SelectButton({ onChange, options, defaultValue, width }) {
   // styles to close button
   const customStyles = {
     control: (base, state) => ({
       ...base,
-      width: `${width}`,
-      border: "1px solid #611707",
-      borderRadius: "5px",
-      boxShadow: state.isFocused ? null : null,
-      "&:hover": {
-        borderColor: "#611707",
+      border: '1px solid #611707',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      boxShadow: state.isFocused ? 'none' : 'none',
+      '&:hover': {
+        borderColor: '#611707',
       },
     }),
     option: (base, state) => ({
       ...base,
-      backgroundColor: state.isFocused ? "#611707" : "#fff",
-      color: state.isFocused ? "#fff" : "#611707",
-      "&:active": {
-        backgroundColor: "#611707",
-        color: "#fff",
+      border: 0,
+      backgroundColor: state.isFocused ? '#611707' : '#fff',
+      cursor: 'pointer',
+      color: state.isFocused ? '#fff' : '#611707',
+      '&:active': {
+        backgroundColor: '#611707',
+        color: '#fff',
       },
     }),
     menu: (base) => ({
       ...base,
-      borderRadius: "5px",
-      marginTop: "0px",
+      border: 0,
+      width: width,
+      borderRadius: '5px',
+      marginTop: '0px',
     }),
     singleValue: (base) => ({
       ...base,
-      color: "#611707",
+      border: 0,
+      color: '#611707',
     }),
   };
 
-  const buttonStyles = {
-    color: "#fff",
-    fontSize: "15px",
-    fontWeight: "600",
-    fontFamilly: "Poppins",
-    letterSpacing: "1px",
-    width: `${width}`,
-  };
-
-  // not used
-  // const colourStyles = {
-  //
-  //   control: (styles) => ({
-  //     ...styles,
-  //     border: '1px solid #611707',
-  //     padding: '3px 2px',
-  //   }),
-  //
-  //   option: (styles, {isDisabled, isFocused, isSelected, isFixed }) => {
-  //       return {
-  //         ...styles,
-  //         backgroundColor: (isFocused && isSelected) ? '#611707' : isFocused ? '#fff' : isSelected ? '#611707' :  isDisabled ? 'red' : isFixed ? 'green' : '#fff',
-  //         color: (isFocused && isSelected) ? '#fff' : isSelected ? '#fff' : '#611707',
-  //         ':active': {
-  //           ...styles[':active'],
-  //           backgroundColor: '#fff',
-  //         }
-  //       };
-  //   },
-  //
-  //   menu: () => ({
-  //     color: '#611707',
-  //     zIndex: 9999
-  //   }),
-  //
-  //   menuPortal: (styles) => ({
-  //     ...styles,
-  //     zIndex: 9999
-  //   }),
-  //
-  // };
-
   return (
     <>
-      <div style={buttonStyles}>
+      <div className={`text-white text-xs font-semibold font-poppins tracking-widest sm:text-base`}>
         <Select
-          onChange={(newValue) => setValue(newValue)}
-          options={[
-            { value: "complete", label: "Complete" },
-            { value: "incomplete", label: "Incomplete" },
-          ]}
+          onChange={onChange}
+          defaultValue={defaultValue}
+          isSearchable={false}
+          options={options}
           styles={customStyles}
         />
       </div>
@@ -94,6 +55,19 @@ export default function SelectButton({ width, setValue }) {
 }
 
 SelectButton.propTypes = {
+  setFilter: PropTypes.func,
+  onChange: PropTypes.func,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
   width: PropTypes.string,
-  setValue: PropTypes.func,
-}
+  defaultValue: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string,
+      label: PropTypes.string,
+    }),
+  ),
+};

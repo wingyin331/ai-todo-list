@@ -1,26 +1,20 @@
-import React from "react";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-export default function Input({ onChangeHandler }) {
-  const inputStyles = {
-    padding: "10px 0px",
-    border: "1px solid #611707",
-    borderRadius: "5px",
-    marginBottom: "10px",
-    width: "100%",
-  };
-
-  const containerStyles = {
-    width: "100%",
-  };
-
+export default function Input({
+  onChangeHandler,
+  onKeyDownHandler,
+  value,
+  placeholder = 'Add a new task',
+}) {
   return (
-    <div style={containerStyles}>
+    <div className='w-full'>
       <input
         onChange={onChangeHandler}
-        type="text"
-        style={inputStyles}
-        placeholder="Add a new task"
+        onKeyDown={onKeyDownHandler}
+        type='text'
+        className='p-2 border-2 border-coffeeDark rounded-md w-full my-3'
+        placeholder={placeholder}
+        value={value}
       />
     </div>
   );
@@ -28,4 +22,7 @@ export default function Input({ onChangeHandler }) {
 
 Input.propTypes = {
   onChangeHandler: PropTypes.func,
-}
+  onKeyDownHandler: PropTypes.func,
+  value: PropTypes.string,
+  placeholder: PropTypes.string,
+};
